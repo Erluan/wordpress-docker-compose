@@ -10,8 +10,10 @@ services:
        MYSQL_ROOT_PASSWORD: password
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
-       MYSQL_PASSWORD: 123456
-
+       MYSQL_PASSWORD: PASSWORD
+     ports:
+        - "3306:3306"
+        
    wordpress:
      depends_on:
        - db
@@ -22,7 +24,7 @@ services:
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: 123456
+       WORDPRESS_DB_PASSWORD: PASSWORD
        WORDPRESS_DB_NAME: wordpress
      volumes:
        - "/c/YOUR_PROJECT_DIRECTORY/wordpress:/var/www/html"
