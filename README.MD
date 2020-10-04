@@ -1,4 +1,4 @@
-# Dockeer-compose File to Create A Wordpress Application on Windows #
+# Docker-compose File to Create A Wordpress Application on Windows #
 
 ### Installation and Initialization
 Clone the repository and execute the following command to "up" the images:
